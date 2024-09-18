@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <base href="https://pollos-deliciosos.com/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pollos Deliciosos - El mejor pollo de la ciudad</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #ff9800;
+      --secondary-color: #f44336;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #fff9e6;
+    }
+
+    .navbar-custom {
+      background-color: var(--primary-color);
+    }
+
+    .navbar-custom .navbar-brand,
+    .navbar-custom .nav-link {
+      color: white;
+    }
+
+    .navbar-custom .nav-link:hover {
+      color: #f8f9fa;
+    }
+
+    .hero {
+      background-image: url('https://pollos-deliciosos.com/images/hero-chicken.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .card {
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .btn-primary {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+
+    .btn-primary:hover {
+      background-color: #e68a00;
+      border-color: #e68a00;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="#">Pollos Deliciosos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#menu">Menú</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#ubicacion">Ubicación</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="inicio" class="hero mb-5">
+    <div class="container">
+      <h1 class="display-4">El Mejor Pollo de la Ciudad</h1>
+      <p class="lead">Descubre el sabor inigualable de nuestro pollo a la brasa y nuestras deliciosas especialidades</p>
+    </div>
+  </section>
+
+  <section id="menu" class="container mb-5">
+    <h2 class="text-center mb-4">Nuestro Menú</h2>
+    <div class="row" id="menu-dinamico">
+      <!-- Aquí se inyectarán dinámicamente las tarjetas con el menú -->
+    </div>
+  </section>
+
+  <section id="ubicacion" class="container mb-5">
+    <h2 class="text-center mb-4">Nuestra Ubicación</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.9728980037!2d-74.07608668523784!3d4.598916043799449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99a7eccfe58f%3A0x99cb72b35351e5e5!2sPlaza%20de%20Bol%C3%ADvar!5e0!3m2!1ses!2sco!4v1617743948947!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h3>Dirección</h3>
+        <p>Calle Principal #123, Ciudad Pollo, CP 12345</p>
+        <h3>Horario</h3>
+        <p>Lunes a Sábado: 11:00 AM - 10:00 PM<br>Domingo: 12:00 PM - 9:00 PM</p>
+        <h3>Teléfono</h3>
+        <p>(123) 456-7890</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="container mb-5">
+    <h2 class="text-center mb-4">Contáctanos</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="mensaje" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2023 Pollos Deliciosos. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Firebase Integration -->
+  <script type="module">
+    // Importar funciones de Firebase
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+    import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
+
+    // Configuración de Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyCvIHj9StCzu9m1x8F4kHqDO_dqmJMdaQs",
+      authDomain: "webpollos-115fb.firebaseapp.com",
+      projectId: "webpollos-115fb",
+      storageBucket: "webpollos-115fb.appspot.com",
+      messagingSenderId: "158780641641",
+      appId: "1:158780641641:web:175ca8912e40ed1b336df8",
+      measurementId: "G-Y359W478Q8",
+      databaseURL: "https://webpollos-115fb-default-rtdb.firebaseio.com"
+    };
+
+    // Inicializar Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+
+    // Referencia a la base de datos en tiempo real
+    const menuRef = ref(database, 'menu');
+
+    // Función para obtener los datos del menú desde Firebase y mostrar en la página
+    onValue(menuRef, (snapshot) => {
+      const data = snapshot.val();
+      mostrarMenu(data);
+    });
+
+    // Función para mostrar el menú dinámicamente en la página
+    function mostrarMenu(data) {
+      const menuDiv = document.getElementById('menu-dinamico');
+      menuDiv.innerHTML = '';  // Limpiar contenido previo
+
+      // Iterar sobre las categorías de pollos y partes
+      for (const tipoPollo in data.pollos) {
+        const pollo = data.pollos[tipoPollo];
+
+        for (const parte in pollo.partes) {
+          const partePollo = pollo.partes[parte];
+          
+          // Crear las tarjetas para cada parte del menú
+          const card = `
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="card h-100">
+                <img src="https://pollos-deliciosos.com/images/${partePollo.nombre.toLowerCase().replace(' ', '-')}.jpg" class="card-img-top" alt="${partePollo.nombre}" width="300" height="200">
+                <div class="card-body">
+                  <h5 class="card-title">${partePollo.nombre}</h5>
+                  <p class="card-text">${partePollo.descripcion}</p>
+                  <p class="card-text"><strong>$${partePollo.precio}</strong></p>
+                  <a href="#" class="btn btn-primary">Ordenar</a>
+                </div>
+              </div>
+            </div>
+          `;
+
+          menuDiv.innerHTML += card;  // Añadir tarjeta al menú dinámico
+        }
+      }
+
+      // Mostrar las bebidas
+      for (const bebida in data.bebidas) {
+        const bebidaItem = data.bebidas[bebida];
+        
+        const bebidaCard = `
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card h-100">
+              <img src="https://pollos-deliciosos.com/images/${bebidaItem.nombre.toLowerCase().replace(' ', '-')}.jpg" class="card-img-top" alt="${bebidaItem.nombre}" width="300" height="200">
+              <div class="card-body">
+                <h5 class="card-title">${bebidaItem.nombre}</h5>
+                <p class="card-text">${bebidaItem.descripcion}</p>
+                <p class="card-text"><strong>$${bebidaItem.precio}</strong></p>
+                <a href="#" class="btn btn-primary">Ordenar</a>
+              </div>
+            </div>
+          </div>
+        `;
+
+        menuDiv.innerHTML += bebidaCard;  // Añadir tarjeta de bebidas al menú dinámico
+      }
+    }
+  </script>
+</body>
+</html>
